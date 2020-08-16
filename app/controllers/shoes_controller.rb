@@ -15,7 +15,12 @@ get '/shoes' do
 erb :'shoes/index'
 end
 
-#show route for a single shoe
+#show dynamic route for a single shoe
+get '/shoes/:id' do
+    @shoe = Shoe.find_by(id: params[:id])
+
+    erb :"/shoes/show"
+end
 
 
 

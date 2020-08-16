@@ -2,8 +2,8 @@ User.destroy_all
 Shoe.destroy_all
 #here is where I will write the seed data for my program
 
-celeste = User.create(name: "celeste", email: "celeste@celeste.com", image_url: "https://picsum.photos/id/237/200/300", bio: "sneaker gawd", password: "password")
-brandon = User.create(name: "celeste",email: "brandon@brandon.com", image_url: "https://picsum.photos/id/238/200/300", bio: "sneaker game sick, someone call a doctor.", password: "pw")
+celeste = User.create(name: "Celeste", email: "celeste@celeste.com", image_url: "https://picsum.photos/id/237/200/300", bio: "sneaker gawd", password: "password")
+brandon = User.create(name: "Brandon",email: "brandon@brandon.com", image_url: "https://picsum.photos/id/238/200/300", bio: "sneaker game sick, someone call a doctor.", password: "pw")
 
 Shoe.create(title: "Air Jordan 'Flu Game' 12", image_url: "https://cdn.flightclub.com/2600/TEMPLATE/012394/1.jpg", description: "The Air Jordan 12 “Flu Game” is a black and red version of Michael Jordan's twelfth signature shoe. MJ wore these during Game 5 of the 1997 NBA Finals while having flu-like symptoms. Despite his condition, he was able to lead the Chicago Bulls to victory over the Utah Jazz.", user_id: celeste.id)
 
