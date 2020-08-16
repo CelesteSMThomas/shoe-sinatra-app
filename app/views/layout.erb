@@ -14,12 +14,24 @@
     <link rel="stylesheet" href="/stylesheets/main.css" />
   </head>
   <body>
+
+
+
     <div class="wrapper">
+
+    <div class="nav">
+    <% if logged_in? %>
+    <a href="/">All Shoes</a>
+    <a href="/">Add a Shoe</a>
+    <a href="/logout">Log Out</a>
+    <%end%>
+    
+    </div>
 
         <%= yield %>
 
       <footer class="branding">
-        <small>&copy; 2020 <strong>ShoesSinatraApp</strong></small>
+        <small>&copy; 2020 <strong>ShoeGameApp</strong></small>
       </footer>
     </div>
 
