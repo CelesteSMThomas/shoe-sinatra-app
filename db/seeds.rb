@@ -1,4 +1,5 @@
 User.destroy_all
+Shoe.destroy_all
 #here is where I will write the seed data for my program
 
 celeste = User.create(name: "celeste", email: "celeste@celeste.com", image_url: "https://picsum.photos/id/237/200/300", bio: "sneaker gawd", password: "password")

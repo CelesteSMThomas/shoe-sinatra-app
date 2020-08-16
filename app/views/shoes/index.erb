@@ -1,0 +1,8 @@
+<h1>All Shoes</h1>
+<% @shoes.each do |shoe| %>
+    <h4><a href="/shoes/<%= shoe.id %>"><%= shoe.title %></a></h4>
+    <img src"<%= shoe.image_url %>" alt="<%= shoe.title %>" height="200" width ="200">
+    <strong>Created At: <%= shoe.created_at %></strong>
+    <p><%= shoe.description %></p>
+    <p>By: <%= shoe.user.name %></p>
+    <% end %>
