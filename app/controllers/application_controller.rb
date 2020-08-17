@@ -9,6 +9,7 @@ class ApplicationController < Sinatra::Base
     enable :sessions
     # set session secret for an extra layer of security
     set :session_secret, "super_cali_fragilistic_expialidocious"
+    register Sinatra::Flash
   end
 
   get "/" do
@@ -32,6 +33,11 @@ class ApplicationController < Sinatra::Base
       #it is a double bang to convert to a hard true or hard false
         !!current_user
     end
+
+      # create an authorization helper for edit/delete
+      def authorized_to_edit?(shoe)
+        shoe.user == current_user
+      end
   end
 
 end

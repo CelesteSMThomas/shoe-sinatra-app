@@ -19,10 +19,18 @@
 
     <div class="wrapper">
 
+    <% if flash[:error] %>
+    <h3><%= flash[:error] %></h3
+    <% end %>
+
+    <% if flash[:message] %>
+   <h3 style="color:red;"><%= flash[:message] %></h3>
+    <% end %>
+
     <div class="nav">
-    <% if logged_in? %>
+    <h3 style="color:green;"><% if logged_in? %>
     <a href="/shoes">All Shoes</a>
-    <a href="/">Add a Shoe</a>
+    <a href="/shoes/new">Add a Shoe</a>
     <a href="/logout">Log Out</a>
     <%end%>
     

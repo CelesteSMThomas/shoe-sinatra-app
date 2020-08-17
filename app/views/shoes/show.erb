@@ -1,5 +1,18 @@
+
 <h3><%= @shoe.title %></h3>
-<img src"<%= @shoe.image_url %>" alt="<%= @shoe.title %>" height="200" width ="200">
+<img src="<%= @shoe.image_url %>" alt="<%= @shoe.title %>" height="200" width="200">
+<br><br>
 <strong>Created At: <%= @shoe.created_at %></strong>
 <p><%= @shoe.description %></p>
-<p>By: <%= @shoe.user.name.capitalize %></p>
+<p>By: <%= @shoe.user.name %></p>
+
+<% if authorized_to_edit?(@shoe) %>
+
+<a href="/shoes/<%= @shoe.id %>/edit">Edit Shoe</a>
+
+<form class="" action="/shoes/<%= @shoe.id %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <input type="submit" name="" value="Delete This Shoe">
+</form>
+
+<% end %>
